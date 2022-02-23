@@ -29,7 +29,6 @@ public class RSA {
 		BigInteger productN = bigP.multiply(bigQ);
 		BigInteger phi = bigP.subtract(BigInteger.ONE).multiply(bigQ.subtract(BigInteger.ONE));
 
-		
 		// Generating an encryption key
 		BigInteger eKey;
 		do
@@ -41,7 +40,6 @@ public class RSA {
 		BigInteger dKey = eKey.modInverse(phi);
 		System.out.println("Decryption key = " + dKey);
 
-		
 		// Message encryption
 		BigInteger message = BigInteger.valueOf(1337);
 		BigInteger msgEn = message.modPow(eKey, productN);
