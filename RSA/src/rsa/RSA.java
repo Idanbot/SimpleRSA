@@ -30,21 +30,6 @@ public class RSA {
 		BigInteger phi = bigP.subtract(BigInteger.ONE).multiply(bigQ.subtract(BigInteger.ONE));
 
 		
-		
-		// Generating possible keys into a list
-//		List<BigInteger> possibleKeys = new ArrayList<>();
-//		for (BigInteger i = BigInteger.TWO; i.compareTo(phi) == -1; i = i.add(BigInteger.ONE)) {
-//			if (productN.gcd(i).compareTo(BigInteger.ONE) == 0 && phi.gcd(i).compareTo(BigInteger.ONE) == 0) {
-//				possibleKeys.add(i);
-//			}
-//		}
-//		
-//		// Printing generated possible key list
-//		System.out.println(possibleKeys);
-
-		
-		
-		
 		// Generating an encryption key
 		BigInteger eKey;
 		do
